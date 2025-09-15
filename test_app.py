@@ -1,4 +1,3 @@
-# test_app.py
 import pytest
 from app import app
 
@@ -10,7 +9,7 @@ def client():
 
 def test_hello_route(client):
     rv = client.get('/')
-    assert rv.data == b"Hello from AWS CodeBuild via GitHub! 🚀"
+    assert rv.data == b"Hello from AWS CodeBuild via GitHub! \xf0\x9f\x9a\x80"
 
 def test_health_route(client):
     rv = client.get('/health')
